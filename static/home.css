@@ -1,0 +1,46 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.content{
+	margin-left: 10%;
+	margin-top: 10%;
+}
+
+.content h1{
+	font-size: 50px;
+	font-weight: 100;
+	margin-top: 24px;
+	margin-bottom: 15px;
+	color: #232d60;
+}
+
+.content p{
+	font-size: 18px;
+	color: #6a7199;
+}
+
+.content a{
+	margin-top: 40px;
+	display: inline-block;
+	background: linear-gradient(45deg, #fc84ac, #9c7ccc);
+	border-radius: 6px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: #fff;
+	font-size: 19px;
+	box-shadow: 3px 8px 22px rgba(94, 28, 68, 0.15);
+}
+
+.content a:hover{
+	background: linear-gradient(45deg, #b81d82, #570e9d);
+	color: white;
+}
+
+.gif{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}

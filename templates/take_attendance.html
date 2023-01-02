@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="static/take_attendance.css">
+{% endblock head %}
+
+{% block body %}
+	<div class="select-sub">
+		<center>
+			<form action="#" method="POST">
+		      	<select class="select-subject" name="subject" id="lang">
+		      		{% for sub in subject_list %}
+			        <option class="options">{{sub}}</option>
+			        {% endfor %}
+		      	</select>
+		      <button class="submit-subject" type="submit">Submit</button>
+			</form>
+		</center>
+	</div>
+
+
+	<div class="video">
+		<center>
+			{% if request.method == 'GET' %}
+			<img class="frame" src="static/images/plain_black.jpg" />
+			{% else %}
+			<img class="frame-2" src="{{ url_for('take_attendance') }}"/>
+			{% endif %}
+		</center>
+	</div>
+{% endblock body %}

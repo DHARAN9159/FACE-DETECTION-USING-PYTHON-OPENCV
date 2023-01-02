@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/home.css">
+{% endblock head %}
+
+{% block body %}
+<body style="background-color: rgb(252,243,248)">
+
+<!-- 	<div class="container">
+		<div class="navbar">
+			<img src="static/images/face1.png" width="50" height="50">
+			<nav class="nav-bar">
+				<ul>
+					<li><a href="{{url_for('home')}}">Home</a></li>
+					<li><a href="{{url_for('add_students')}}">Add Students</a></li>
+					<li><a href="">View Attendance</a></li>
+					<li><a href="">Statistics</a></li>
+					<li><a href="">About</a></li>
+				</ul>
+			</nav>
+		</div>
+
+	</div> -->
+
+	<div class="content">
+		<h1>Smart Attendance</h1>
+		<p>There's no time like the present, and no substitute for <br> being present.</p>
+		<a class="btn" href="{{url_for('take_attendance')}}">Take Attendance</a>
+	</div>
+
+    <div class="gif">
+        <img align="right" src="static/images/facescan.gif" />
+    </div>
+
+</body>
+{% endblock body %}

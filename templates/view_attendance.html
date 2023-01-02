@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="static/view_attendance.css">
+{% endblock head %}
+
+{% block body %}
+
+  <div class="select-sub">
+    <center>
+      <form action="#" method="POST">
+            <select class="select-subject" name="subject" id="lang">
+              {% for sub in subject_list %}
+              <option class="options">{{sub}}</option>
+              {% endfor %}
+            </select>
+          <button class="submit-subject" type="submit">Submit</button>
+      </form>
+    </center>
+  </div>
+
+  <h5 style="text-align: center;">{{selected_sub}}</h5>
+
+  {% if request.method == 'POST' %}
+  <center>
+  <div class="attendance-table">
+    <table class="table">
+
+      <tr class="table__header">
+        {% for header in headings %}
+        <th class="table__cell">{{ header }}</th>
+        {% endfor %}
+      </tr>
+        
+      {% for row in data %}
+      <tr class="table__row">
+        {% for cell in row %}
+        <td class="table__cell">{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+
+    </table>
+  </div>
+  </center>
+  {% endif %}
+{% endblock body %}
